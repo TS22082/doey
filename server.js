@@ -14,14 +14,10 @@ app.get('/', function(req, res) {
 
 app.post('/api/todo', function(req, res) {
   var newCharacter = req.body
-
-  console.log(newCharacter)
   todos.push(newCharacter)
   res.json(todos)
 })
 
-// Starts the server to begin listening
-// =============================================================
 app.listen(PORT, function() {
   console.log('App listening on PORT ' + PORT)
 })

@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Star Wars - Express</title>
-    <!-- Latest compiled and minified CSS & JS -->
+    <title>Doey</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -42,7 +41,7 @@
                   class="btn btn-primary btn-md"
                   id="add-btn"
                 >
-                  <span class="fa fa-fire"></span> Add a todo
+                  Add a todo
                 </button>
               </div>
             </div>
@@ -52,7 +51,6 @@
     </div>
 
     <script type="text/javascript">
-      // Question: What does this code do?
       $('#add-btn').on('click', function(event) {
         event.preventDefault()
         var newTodo = {
@@ -60,7 +58,6 @@
             .val()
             .trim()
         }
-
         $.post('/api/todo', newTodo).then(function(data) {
           console.log(data)
         })

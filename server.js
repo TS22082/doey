@@ -6,8 +6,6 @@ var app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// Star Wars Characters (DATA)
-// =============================================================
 var todos = []
 
 app.get('/', function(req, res) {

@@ -13,8 +13,8 @@ app.get('/', function(req, res) {
 })
 
 app.post('/api/todo', function(req, res) {
-  var newCharacter = req.body
-  todos.push(newCharacter)
+  var newTodo = req.body
+  todos.push(newTodo)
   res.json(todos)
 })
 

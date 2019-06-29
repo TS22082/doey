@@ -6,7 +6,7 @@ var app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-var todos = []
+var todos = [{ task: 'a thing' }, { task: 'another thing' }]
 
 //serve html
 app.get('/', function(req, res) {

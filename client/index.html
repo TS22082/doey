@@ -51,17 +51,24 @@
     </div>
 
     <script type="text/javascript">
+      // show all odos on when app loads
       $.get('/api/todos').then(data => {
         console.log(data)
       })
 
+      // add a todo when add-btn is clicked
       $('#add-btn').on('click', function(event) {
+        // prevents screen from reloading
         event.preventDefault()
+
+        // create an object to eventually post
         var newTodo = {
           task: $('#todoInput')
             .val()
             .trim()
         }
+
+        // post todo to backend
         $.post('/api/todo', newTodo).then(function(data) {
           console.log(data)
         })
